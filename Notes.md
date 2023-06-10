@@ -117,6 +117,21 @@ A.T or np.transpose(A)
 ```
 * multiply any matrix by its transpose to get a symetric matrix
 
+### Matrix Norm
+* vector norm is euclidean geometric length, square root of the sum of squared vector elements
+* matrix norm more complicated;  There are multiple, each providing one number to characterize matrix.  || A || is norm for matrix A.
+* two families:  element-wise or entry-wise, reflecting the magnitudes of the elements in the matrix.  induced norms, measuring how much a matrix transforms a vector
+* element wise euclidean norm, or Frobenius:  square root of sum of all matrix elms
+* often serve as cost function in minization algos to prevent large params or sparse solutions (ridge and lasso regressions)
+* distance between two matrices, is frobenius matrix distance between C, which is A - B. 
+
+### Matrix Trace
+* sum of its diagonal elements, indicated as tr(A). 
+* Exists only for square matrices
+* trace of A.T@A = Fr. Norm of A, because A.T@A is the dot product of each row with itself
+
+### Matrix Space
+
 
 
 
