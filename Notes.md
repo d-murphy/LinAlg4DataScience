@@ -131,6 +131,23 @@ A.T or np.transpose(A)
 * trace of A.T@A = Fr. Norm of A, because A.T@A is the dot product of each row with itself
 
 ### Matrix Space
+* Column Space - conceptualize matrix as set of column vectors, vector has a number of dimensions.  Each vector scaled by all possible real number scalers.  The dimensions of the column space is determined by how many columns are in the linearly independent set
+* indicated by C(A)
+* Ax = b, i.e is there a set of coefficients in x such that weight combo produces vector b.  if so, b E C(A) with E is a member of
+```
+[[1,3].T, [1,4].T] # this spans all of R^2
+[[1,3].T, [2,6].T] # this only spans parallel to [1.3].T since not linearly ind.
+[[1,5,1].T, [0,2,2].T] # column space is 2D embedde in R^3
+```
+* Row space is all possible weighted combos of the rows instead of the cols. Indicated as R(A). 
+* Null space asks Ay = 0, what vector y satisfies this equation (excludes the 0 vector, a trivial solution).  Null space is "empty set"  if none.
+  * null space is empty when columns of matrix form linear indepent set
+  * ```scipy.linalg.null_space(A)```  returns a unit vector if it exists, .7071
+  * null space is orthogonal to row space.  dot product of each row and null space is 0.  
+* Right Null Space exists but not covered here.  
+
+### Rank
+
 
 
 
