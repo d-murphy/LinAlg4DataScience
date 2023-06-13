@@ -147,6 +147,36 @@ A.T or np.transpose(A)
 * Right Null Space exists but not covered here.  
 
 ### Rank
+* feature of a matrix expressed as nonnegative integer.  Indicated by r(A), described as "rank-r matrix".  Max is min of M or N, the row or col counts.  
+* "full-rank" vs "reduced-rank" or "rank-deficient" or "singular"
+* interpretations:  largest number of cols (or rows) forming a linearly independent set.  dimensionality of col space.  number of dimensions with info on matrix.  number of nonzero singular values of a matrix
+* Col space and row space are different but dimensionality of matrix spaces, and so the rank, are the same
+* Ranks on special matrices:  Vectors - 1, Zero - 0, Identity - N, Diagonal - Number of nonzero elms
+* Matrix addition - resulting rank is <= rank(A) + rank(B); Matrix multiplication - resulting rank is min of rank(A) and rank(B)
+* shifted matrices have full rank, even as correlation of elements is very high
+* *Vector in Column Space* - Augment matrix with vector youre checking.  Calculate the rank of new and original.  If rank of new is higher than old, vector v is not in the column space, i.e. it adds new information to the matrix and the vector is not dependent on the others.  
+* if rank = max possible rank, i.e. min{M, N}, then matrix is linearly ind.
+
+### Determinant
+* defined only for square matrices; zero for singular / reduced-rank matrices
+* geometric interpretation: how much a matrix stretches vectors during matrix-vector multiplication.  A negative mean one axis is rotated.
+* expressed as det(A)
+* det([[a,b], [c,d]]) = ad - bc
+* in 3x3, there are 6 products, 4x4 24
+* additional geometric insight - det of 0 means at least one of axes is flattened during transformation
+
+### Characteristic Polynomial
+* combine matrix shifting with determinant.  
+* read more some time
+
+### Inverse
+* Another matrix such that Inverse times A = I.  Allows matrix algebra such as solving for x in Ax = b, x = A.inv b
+* Full for square, full-rank matrices; one-sided for rectangular; pseudo for all shapes and ranks
+* For [[a,b], [c,d]] inverse is (1/ad-bc) * [[d,-b], [-c,a]]
+* geometric explanation: inverse restores tranformation done by matrix.   for no inverse in singular matrices:  the dependent column flattens and once flattened can't be restored
+
+
+
 
 
 
