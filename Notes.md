@@ -175,7 +175,14 @@ A.T or np.transpose(A)
 * For [[a,b], [c,d]] inverse is (1/ad-bc) * [[d,-b], [-c,a]]
 * geometric explanation: inverse restores tranformation done by matrix.   for no inverse in singular matrices:  the dependent column flattens and once flattened can't be restored
 
+### Orthogonal Matrix
+* all columns are pair-wise orthogonal.  The norm of each column is 1. 
+* Transpose of the matrix * the matrix is the identity matrix
+* computer from a non-orthogonal via QR decomposition, aka a sophisticated version of Gram-Schmidt
+* QR gives the original matrix A.  Transpose of Q * A = R 
+* More numerically stable way to compute the matrix inverse, i.e. A Inv = R Inv * Q.T.  Still requires inverse of R, but triangular matrices stable through back substitution
 
+### Gauss Jordan Elimination
 
 
 
